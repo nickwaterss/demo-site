@@ -10,5 +10,7 @@
 
 
   $smarty->assign('title', 'Welcome!');
-  $smarty->display('index.tpl');
+  $smarty->display('header.tpl');
+  $smarty->display('index-content.tpl');
+  $smarty->display('footer.tpl');
 ?>

@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Welcome!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <header></header>
-    <main><h1>test</h1></main>
-    <footer></footer>
-  </body>
-</html>
+<?php
+  require_once './libs/smarty-5.4.0/libs/Smarty.class.php';
+  use Smarty\Smarty;
+  $smarty = new Smarty(); //create Smarty object
+  //set template locations
+  $smarty->setTemplateDir('./templates');
+  $smarty->setConfigDir('./config');
+  $smarty->setCompileDir('./compile');
+  $smarty->setCacheDir('./cache');
+
+
+  $smarty->assign('title', 'CSS');
+  $smarty->display('header.tpl');
+  $smarty->display('css-content.tpl');
+  $smarty->display('footer.tpl');
+?>
